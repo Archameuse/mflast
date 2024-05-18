@@ -8,7 +8,6 @@ export default defineEventHandler(event => {
         if(!cookie) throw createError('Cookie not found')
         const token = jwt.verify(cookie, process.env.SECRET_KEY) as JwtPayload
         const {exp, iat, ...user} = token
-        // console.log(user)
         const sign = jwt.sign(user, process.env.SECRET_KEY, {
             expiresIn: '1h'
         })

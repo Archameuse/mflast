@@ -18,7 +18,6 @@ export default defineEventHandler(async event => {
         }) as CharHolder
         return character
     } catch(e) {
-        console.log(e)
         throw createError('Something went wrong')
     }
 })

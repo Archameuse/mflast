@@ -21,7 +21,6 @@ export default defineEventHandler(async (event) => {
         })
         return data
     } catch(e) {
-        console.log(e)
         throw createError('Something went wrong')
     }
 })
