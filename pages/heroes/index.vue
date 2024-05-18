@@ -23,6 +23,7 @@ const {data:heroes, refresh} = useFetch<CharHolder[]>('/api/characters')
 const {user} = useUser()
 const screenSize = ref<number>(0)
 const i18n = useI18n()
+useHead({title: i18n.t('heroes')})
 const addModal = ref<boolean>(false)
 const onResize = () => {
     screenSize.value = window.innerWidth

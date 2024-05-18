@@ -110,6 +110,7 @@ const {data:hero,refresh} = await useFetch<CharHolder>('/api/character', {query:
 const computedHero = computed<Character|undefined>(() => {
     return (i18n.locale.value==='en'&&hero.value?.heroEN)?hero.value?.heroEN : hero.value?.heroRU
 })
+useHead({title: computedHero.value?.name})
 // const error = useError()
 // const router = useRouter()
 // NuxtError

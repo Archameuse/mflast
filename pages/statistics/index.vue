@@ -5,5 +5,7 @@
 </template>
 
 <script setup lang="ts">
+const i18n = useI18n()
+useHead({title: i18n.t('statistics')})
 const { data: players } = await useFetch<Player[]>('/api/players')
 </script>
