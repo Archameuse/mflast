@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <main class="flex flex-col items-center text-center pb-10 max-w-screen-lg bg-[whitesmoke] drop-shadow-md px-4 m-auto">
+        <main class="flex flex-col items-center text-center pb-10 max-w-screen-lg bg-[whitesmoke] shadow-2xl px-4 m-auto">
             <div class="text-xl sm:text-2xl border-b-2 border-black pb-2 w-full max-w-[60ch] mt-5">
                 <p>{{computedHero.description}}</p>
             </div>
@@ -111,9 +111,7 @@ const computedHero = computed<Character|undefined>(() => {
     return (i18n.locale.value==='en'&&hero.value?.heroEN)?hero.value?.heroEN : hero.value?.heroRU
 })
 useHead({title: computedHero.value?.name})
-// const error = useError()
-// const router = useRouter()
-// NuxtError
+
 </script>
 
 <style>

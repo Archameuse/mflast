@@ -14,7 +14,7 @@
             </div>
             <div>
                 <h2 class="uppercase underline text-xl">
-                    {{delayedReversed ? `PTS: ${player.pts}` : `Ранг: ${player.rank}`}}
+                    {{delayedReversed ? `PTS: ${player.pts}` : `${$t('rank')}: ${player.rank}`}}
                 </h2>
                 <h2 class="text-xl">
                     {{delayedReversed ? `Winrate: ${player.winrate}%` : `Club: ${player.club}`}}
