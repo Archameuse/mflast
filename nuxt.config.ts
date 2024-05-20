@@ -19,9 +19,9 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-        Cuprum: true,
-        KellySlab: true,
-        OpenSans: true
+        "Kelly Slab": true,
+        "Cuprum": true,
+        "Open Sans": true
     }
 }
 })
