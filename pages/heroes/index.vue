@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-const {data:heroes, refresh} = useFetch<CharHolder[]>('/api/characters')
+const {data:heroes, refresh} = await useFetch<CharHolder[]>('/api/characters')
 const {user} = useUser()
 const screenSize = ref<number>(0)
 const i18n = useI18n()
