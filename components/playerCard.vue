@@ -4,8 +4,8 @@
             <div class="h-12 flex flex-col justify-center items-center">
                 <h1 class="text-3xl">{{player.season}}</h1>
             </div>
-            <div class="text-white [text-shadow:0_0_5px_black,0_0_2px_rgba(0,0,0,0.6)] h-20 flex flex-col justify-center">
-                <h1 class="text-3xl">{{ player.name }}</h1>
+            <div class="text-white [text-shadow:0_0_5px_black,0_0_2px_rgba(0,0,0,0.6)] h-20 flex flex-col justify-center items-center">
+                <h1 :class="player.name?.length>16?'text-xl flex max-w-full overflow-hidden text-wrap':'text-3xl'">{{ player.name }}</h1>
             </div>
             <div class="text-white [text-shadow:0_0_3px_black] text-left flex flex-col justify-end h-32 pl-[min(3rem,calc(40%-3rem))]">
                 <h3 class="text-sm">{{$t('wins')}}: {{player.wins}}</h3>
@@ -16,7 +16,7 @@
                 <h2 class="uppercase underline text-xl">
                     {{delayedReversed ? `PTS: ${player.pts}` : `${$t('rank')}: ${player.rank}`}}
                 </h2>
-                <h2 class="text-xl">
+                <h2 :class="player.club?.length>14?'text-md':'text-xl'">
                     {{delayedReversed ? `Winrate: ${player.winrate}%` : `Club: ${player.club}`}}
                 </h2>
             </div>
